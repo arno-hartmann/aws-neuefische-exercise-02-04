@@ -32,7 +32,7 @@ jobs:
         run: |
           echo Hey I started a deployment
         
-            $BUCKETNAME=SGE$RANDOM
+            BUCKETNAME=SGE$RANDOM
             aws s3api create-bucket --bucket $BUCKETNAME --create-bucket-configuration LocationConstraint=us-west-2
             aws s3 cp index.html s3://$BUCKETNAME/index.html --acl public-read
             aws website s3://$BUCKETNAME/ --index-document index.html
