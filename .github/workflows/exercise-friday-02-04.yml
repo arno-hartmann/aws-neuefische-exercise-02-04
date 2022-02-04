@@ -31,5 +31,9 @@ jobs:
           
         run: |
           echo Hey I started a deployment
-        #  aws s3api list-buckets
+        
+          aws s3api create-bucket --bucket super-test-XxX1234 --region us-east-2
+          aws s3 cp index.html s3://super-test-XxX1234/index.html --acl public-read
+          aws website s3://super-test-XxX1234/ --index-document index.html
+            
           
