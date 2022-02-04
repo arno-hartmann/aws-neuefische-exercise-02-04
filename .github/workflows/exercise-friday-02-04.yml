@@ -33,4 +33,3 @@ jobs:
           echo Hey I started a deployment
         #  aws s3api list-buckets
           
-          echo test, and deploy your project.
